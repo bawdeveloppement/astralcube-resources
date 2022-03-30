@@ -1,7 +1,10 @@
 package fr.astralcube.acresources.item.bronze;
 
+import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.Map.Entry;
+import java.util.function.Supplier;
 
 import com.github.clevernucleus.dataattributes.api.DataAttributesAPI;
 import com.github.clevernucleus.playerex.PlayerEx;
@@ -42,6 +45,10 @@ public class BronzeChestArmor extends ArmorItem implements Trinket {
         // TODO Auto-generated method stub
         var modifiers = super.getAttributeModifiers(slot);
         System.out.println(modifiers);
+        for (Map.Entry<Identifier, UUID> entry : PlayerEx.MANAGER.modifiers.entrySet()) {
+            Supplier<EntityAttribute> t = DataAttributesAPI.getAttribute(entry.getKey());
+            System.out.println(t);
+        }
         return modifiers;
     }
     @Override
