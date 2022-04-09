@@ -1,0 +1,5 @@
+{
+    "variants": {
+      "": { "model": "acresources:block/example_block" }
+    }
+  }

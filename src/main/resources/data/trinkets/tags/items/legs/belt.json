@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+      "acresources:two_accessory_belt",
+      "acresources:small_health_potion",
+      "acresources:medium_health_potion",
+      "acresources:large_health_potion"
+    ]
+  }

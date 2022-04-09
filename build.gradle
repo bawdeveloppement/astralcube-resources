@@ -25,6 +25,7 @@ repositories {
 		name = "Ladysnake Libs"
 		url = "https://ladysnake.jfrog.io/artifactory/mods"
 	}
+    maven { url "https://maven.nucleoid.xyz/" }
 	maven {
 		url = "https://www.cursemaven.com"
 	}
@@ -41,6 +42,8 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+	// modImplementation "com.github.clevernucleus:OfflinePlayerCache:${project.opc_version}"
+	// include "com.github.clevernucleus:OfflinePlayerCache:${project.opc_version}"
 	
     modImplementation "curse.maven:playerex-409221:3638699"
 
@@ -48,6 +51,10 @@ dependencies {
         exclude(group: "net.fabricmc.fabric-api")
     }
     modImplementation "curse.maven:dataattributes-514734:3633032"
+    modImplementation include("eu.pb4:placeholder-api:${project.placeholder_api}")
+	
+	implementation 'net.objecthunter:exp4j:0.4.8'
+	include 'net.objecthunter:exp4j:0.4.8'
 }
 
 processResources {
