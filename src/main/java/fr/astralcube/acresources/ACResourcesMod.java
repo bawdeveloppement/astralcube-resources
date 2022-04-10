@@ -4,23 +4,10 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.GlowLichenBlock;
-import net.minecraft.block.OreBlock;
-import net.minecraft.block.entity.FurnaceBlockEntity;
-import net.minecraft.client.gui.screen.ingame.FurnaceScreen;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterials;
-import net.minecraft.recipe.Recipe;
-import net.minecraft.recipe.SmeltingRecipe;
-import net.minecraft.screen.FurnaceScreenHandler;
-import net.minecraft.screen.slot.FurnaceOutputSlot;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.BiomePlacementModifier;
@@ -29,16 +16,12 @@ import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
 import net.minecraft.world.gen.decorator.PlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.OreConfiguredFeatures;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.OrePlacedFeatures;
 import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -76,7 +59,7 @@ public class ACResourcesMod implements ModInitializer {
         return Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(MOD_ID, id), feature);
     }
 
-    public static final List<OreFeatureConfig.Target> TOPAZ_ORES = List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ACBlocks.TOPAZ_ORE_BLOCK.getDefaultState()), OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ACBlocks.TOPAZ_ORE_BLOCK.getDefaultState()));
+    public static final List<OreFeatureConfig.Target> TOPAZ_ORES = List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ACBlocks.TOPAZ_ORE_BLOCK.getDefaultState()), OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ACBlocks.DEEPSLATE_TOPAZ_ORE_BLOCK.getDefaultState()));
     public static final ConfiguredFeature<?, ?> ORE_TOPAZ = registerConfiguredFeature("ore_topaz", Feature.ORE.configure(new OreFeatureConfig(TOPAZ_ORES, 9)));
     public static final PlacedFeature ORE_TOPAZ_UPPER = registerPlacedFeature("ore_topaz_upper", ORE_TOPAZ.withPlacement(modifiersWithCount(90, HeightRangePlacementModifier.trapezoid(YOffset.fixed(80), YOffset.fixed(384)))));
     public static final PlacedFeature ORE_TOPAZ_MIDDLE = registerPlacedFeature("ore_topaz_middle", ORE_TOPAZ.withPlacement(modifiersWithCount(10, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-24), YOffset.fixed(56)))));

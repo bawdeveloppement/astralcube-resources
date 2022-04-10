@@ -1,7 +1,7 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "acresources:block/topaz_ore"
+        "all": "acresources:block/deepslate_topaz_ore"
     }
 }
 

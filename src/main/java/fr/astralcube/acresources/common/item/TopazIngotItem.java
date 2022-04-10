@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 
 public class TopazIngotItem extends Item {
 
-    public TopazIngotItem(Settings settings) {
+    public TopazIngotItem() {
         super((new FabricItemSettings().group(ACItems.JEWELS_GROUP)));
         //TODO Auto-generated constructor stub
     }

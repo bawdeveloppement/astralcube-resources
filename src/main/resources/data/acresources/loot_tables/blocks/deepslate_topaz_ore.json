@@ -25,7 +25,7 @@
                     }
                   }
                 ],
-                "name": "acresources:topaz_ore"
+                "name": "acresources:deepslate_topaz_ore"
               },
               {
                 "type": "minecraft:item",
@@ -39,13 +39,13 @@
                     "function": "minecraft:explosion_decay"
                   }
                 ],
-                "name": "acresources:topaz_ore"
+                "name": "acresources:deepslate_topaz_ore"
               }
             ]
           },
           {
             "type": "minecraft:item",
-            "name": "acresources:topaz_ore"
+            "name": "acresources:deepslate_topaz_ore"
           }
         ]
       }

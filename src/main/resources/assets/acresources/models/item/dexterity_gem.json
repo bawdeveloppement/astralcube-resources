@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "acresources:item/topaz_nugget"
+      "layer0": "acresources:item/dexterity_gem"
     }
 }

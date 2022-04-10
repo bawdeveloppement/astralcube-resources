@@ -1,5 +1,5 @@
 {
     "variants": {
-      "": { "model": "acresources:block/topaz_ore_block" }
+      "": { "model": "acresources:block/topaz_ore" }
     }
   }

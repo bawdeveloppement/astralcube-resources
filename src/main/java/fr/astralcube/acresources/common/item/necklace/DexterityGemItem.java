@@ -13,13 +13,12 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
 import net.minecraft.item.ItemStack;
 
-public class DexterityNugget extends TrinketItem {
+public class DexterityGemItem extends TrinketItem {
 
-    public DexterityNugget(Settings settings) {
+    public DexterityGemItem(Settings settings) {
         super(settings);
         //TODO Auto-generated constructor stub
     }
-    
     
     @Override
     public com.google.common.collect.Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack,

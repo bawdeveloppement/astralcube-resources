@@ -1,6 +1,6 @@
 {
     "type": "minecraft:crafting_shaped",
-    "group": "topaz_ingot",
+    "group": "dexterity_gem",
     "pattern": [
       "###",
       "#X#",
@@ -11,10 +11,10 @@
         "item": "acresources:topaz_nugget"
       },
       "X": {
-        "item": "minecraft:"
+        "item": "minecraft:bone_meal"
       }
     },
     "result": {
-      "item": "acresources:topaz_ingot"
+      "item": "acresources:dexterity_gem"
     }
   }
