@@ -1,4 +1,4 @@
-package fr.astralcube.acresources.common.item.dexterity;
+package fr.astralcube.acresources.common.item.necklace;
 
 import java.util.UUID;
 

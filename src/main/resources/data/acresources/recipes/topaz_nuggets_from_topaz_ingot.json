@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "topaz_nugget",
+    "ingredients": [
+      {
+        "item": "acresources:topaz_ingot"
+      }
+    ],
+    "result": {
+      "item": "acresources:topaz_nugget",
+      "count": 9
+    }
+  }

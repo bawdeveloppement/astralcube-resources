@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "topaz_ingot",
+    "ingredients": [
+      {
+        "item": "minecraft:topaz_block"
+      }
+    ],
+    "result": {
+      "item": "minecraft:topaz_ingot",
+      "count": 9
+    }
+  }

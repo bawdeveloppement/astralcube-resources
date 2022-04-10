@@ -1,4 +1,4 @@
-package fr.astralcube.acresources.common.item.diamond;
+package fr.astralcube.acresources.common.item.necklace;
 
 import java.util.UUID;
 
@@ -24,6 +24,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.gen.feature.OreConfiguredFeatures;
 
 public class DexterityNecklace extends TrinketItem{
 	// public class DexterityNecklace extends TrinketItem implements TrinketRenderer{
@@ -56,12 +57,10 @@ public class DexterityNecklace extends TrinketItem{
 	@Override
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		Multimap<EntityAttribute, EntityAttributeModifier> modifiers = super.getModifiers(stack, slot, entity, uuid);
-		EntityAttributeModifier speedModifier = new EntityAttributeModifier(uuid, "acressources:movement_speed",
-				0.4, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+		EntityAttributeModifier speedModifier = new EntityAttributeModifier(uuid, "acressources:movement_speed", 0.4, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
         EntityAttributeModifier dexterityModifier = new EntityAttributeModifier(uuid, "acressources", 5, Operation.ADDITION);
 		modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, speedModifier);
 		modifiers.put(ExAPI.DEXTERITY.get(), dexterityModifier);
-		SlotAttributes.addSlotModifier(modifiers, "chest/necklace", uuid, 6, EntityAttributeModifier.Operation.ADDITION);
 		return modifiers;
 	}
 }

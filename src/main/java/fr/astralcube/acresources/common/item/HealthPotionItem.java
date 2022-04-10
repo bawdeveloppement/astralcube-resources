@@ -53,6 +53,8 @@ public class HealthPotionItem extends PotionItem implements Trinket {
 
 	}
 
+	
+
 	@Override
 	public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player,
 			StackReference cursorStackReference) {

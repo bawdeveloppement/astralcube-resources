@@ -5,9 +5,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 
-public class TopazOreBlock extends Block {
+public class DeepslateTopazOreBlock extends Block {
 
-    public TopazOreBlock() {
-        super((FabricBlockSettings.of(Material.STONE, MapColor.GRAY).strength(3.0f, 3.0f).luminance(2)));
+    public DeepslateTopazOreBlock() {
+        super((FabricBlockSettings.of(Material.STONE, MapColor.GRAY).strength(3.0f, 3.0f)));
     }
+    
 }

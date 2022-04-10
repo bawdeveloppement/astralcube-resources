@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "topaz_ingot",
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "acresources:topaz_nugget"
+      },
+      "X": {
+        "item": "minecraft:"
+      }
+    },
+    "result": {
+      "item": "acresources:topaz_ingot"
+    }
+  }

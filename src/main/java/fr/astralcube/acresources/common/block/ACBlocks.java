@@ -27,13 +27,16 @@ public class ACBlocks {
     
     public static final BlockJumpPad JUMP_PAD_BLOCK = new BlockJumpPad(FabricBlockSettings.of(Material.SPONGE).strength(4.0f));
     public static final ChargeableBlock CHARGEABLE_BLOCK = new ChargeableBlock(FabricBlockSettings.of(Material.SPONGE).strength(4.0f));
-    public static final TopazOreBlock TOPAZ_ORE_BLOCK = new TopazOreBlock(FabricBlockSettings.of(Material.STONE, MapColor.GRAY).strength(3.0f, 3.0f));
+    public static final TopazOreBlock TOPAZ_ORE_BLOCK = new TopazOreBlock();
+    public static final DeepslateTopazOreBlock DEEPSLATE_TOPAZ_ORE_BLOCK = new DeepslateTopazOreBlock();
     
     public static BlockEntityType<ChargeableBlockEntity> CHARGEABLE_BLOCK_ENTITY;
     public static void init () {
         registerBlock("jump_pad_block", JUMP_PAD_BLOCK);
         registerBlock("chargeable_block", CHARGEABLE_BLOCK);
-        registerBlock("topaz_ore_block", TOPAZ_ORE_BLOCK);
+        registerBlock("topaz_ore", TOPAZ_ORE_BLOCK);
+        registerBlock("deepslate_topaz_ore", DEEPSLATE_TOPAZ_ORE_BLOCK);
+        
         CHARGEABLE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "acresources:chargeable_block_entity", FabricBlockEntityTypeBuilder.create(ChargeableBlockEntity::new, CHARGEABLE_BLOCK).build(null));
         // Registry.register(Registry.BLOCK, new Identifier("acresources", "example_block"), EXAMPLE_BLOCK);
     }

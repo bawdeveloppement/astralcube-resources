@@ -9,8 +9,8 @@ import fr.astralcube.acresources.common.item.bronze.BronzeChestArmor;
 import fr.astralcube.acresources.common.item.bronze.BronzeIngot;
 import fr.astralcube.acresources.common.item.bronze.BronzeRing;
 import fr.astralcube.acresources.common.item.bronze.BronzeSword;
-import fr.astralcube.acresources.common.item.dexterity.DexterityNugget;
-import fr.astralcube.acresources.common.item.diamond.DexterityNecklace;
+import fr.astralcube.acresources.common.item.necklace.DexterityNecklace;
+import fr.astralcube.acresources.common.item.necklace.DexterityNugget;
 import fr.astralcube.acresources.common.item.necklace.FourAccessoryDexterityNecklace;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -22,6 +22,9 @@ import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PotionItem;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -35,13 +38,13 @@ public final class ACItems {
 		new Identifier(ACResourcesMod.MOD_ID, "jewels"),
 		() -> new ItemStack(Blocks.COBBLESTONE));
 
-
+    public static Item FOUR_ACCESSORY_DEXTERITY_NECKLACE;
     
     public static void init () {
         registerItem("dexterity_necklace", new DexterityNecklace(new FabricItemSettings().group(JEWELS_GROUP).maxCount(1)));
         registerItem("bronze_sword", new BronzeChestArmor(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, new FabricItemSettings().group(JEWELS_GROUP)));
-        registerItem("four_accessory_dexterity_necklace", new FourAccessoryDexterityNecklace(new FabricItemSettings().group(JEWELS_GROUP)));
-        registerItem("dexterity_nugget", new DexterityNugget(new FabricItemSettings().group(JEWELS_GROUP)));
+        FOUR_ACCESSORY_DEXTERITY_NECKLACE = registerItem("four_accessory_dexterity_necklace", new FourAccessoryDexterityNecklace(new FabricItemSettings().group(JEWELS_GROUP).maxCount(1)));
+        registerItem("dexterity_nugget", new DexterityNugget(new FabricItemSettings().group(JEWELS_GROUP).maxCount(1)));
 
         registerItem("small_health_potion", new HealthPotionItem(4.0F));
         registerItem("medium_health_potion", new HealthPotionItem(6.0F));
