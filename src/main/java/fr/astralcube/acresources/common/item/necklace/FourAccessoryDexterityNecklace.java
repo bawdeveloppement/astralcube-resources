@@ -27,7 +27,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class FourAccessoryDexterityNecklace extends TrinketItem implements TrinketRenderer  {
-	private static final Identifier TEXTURE = new Identifier(ACResourcesMod.MOD_ID, "textures/entity/trinket/hat.png");
+	private static final Identifier TEXTURE = new Identifier(ACResourcesMod.MOD_ID, "textures/entity/trinket/four_accessory_dexterity_necklace.png");
 	private BipedEntityModel<LivingEntity> model;
 
 

@@ -3,11 +3,11 @@
     "group": "topaz_ingot",
     "ingredients": [
       {
-        "item": "minecraft:topaz_block"
+        "item": "acresources:topaz_block"
       }
     ],
     "result": {
-      "item": "minecraft:topaz_ingot",
+      "item": "acresources:topaz_ingot",
       "count": 9
     }
   }

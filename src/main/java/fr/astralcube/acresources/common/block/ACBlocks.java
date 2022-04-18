@@ -6,10 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
@@ -32,13 +29,11 @@ public class ACBlocks {
     public static final TopazBlock TOPAZ_BLOCK = new TopazBlock();
     
     public static BlockEntityType<ChargeableBlockEntity> CHARGEABLE_BLOCK_ENTITY;
-    public static void init () {
-        registerBlock("jump_pad_block", JUMP_PAD_BLOCK);
-        registerBlock("chargeable_block", CHARGEABLE_BLOCK);
+    public static void register () {
         registerBlock("topaz_ore", TOPAZ_ORE_BLOCK);
         registerBlock("deepslate_topaz_ore", DEEPSLATE_TOPAZ_ORE_BLOCK);
         registerBlock("topaz_block", TOPAZ_BLOCK);
-        
+
         CHARGEABLE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "acresources:chargeable_block_entity", FabricBlockEntityTypeBuilder.create(ChargeableBlockEntity::new, CHARGEABLE_BLOCK).build(null));
         // Registry.register(Registry.BLOCK, new Identifier("acresources", "example_block"), EXAMPLE_BLOCK);
     }

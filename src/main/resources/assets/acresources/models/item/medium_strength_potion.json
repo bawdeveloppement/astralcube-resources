@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "acresources:item/large_health_potion"
+      "layer0": "acresources:item/medium_strength_potion"
     }
 }

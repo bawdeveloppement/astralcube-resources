@@ -3,33 +3,20 @@ package fr.astralcube.acresources.common.item.necklace;
 import java.util.UUID;
 
 import com.github.clevernucleus.playerex.api.ExAPI;
-import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 
-import dev.emi.trinkets.api.SlotAttributes;
 import dev.emi.trinkets.api.SlotReference;
-import dev.emi.trinkets.api.SlotType;
 import dev.emi.trinkets.api.TrinketItem;
-import dev.emi.trinkets.api.client.TrinketRenderer;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
-import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.gen.feature.OreConfiguredFeatures;
 
 public class DexterityNecklace extends TrinketItem{
 	// public class DexterityNecklace extends TrinketItem implements TrinketRenderer{
 
-    private Multimap<EntityAttribute, EntityAttributeModifier> modifiers;
 
     public DexterityNecklace(Settings settings) {
         super(settings);

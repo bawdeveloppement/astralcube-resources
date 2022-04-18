@@ -36,17 +36,13 @@ public class ACResourcesMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final String MOD_ID = "acresources";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-	public static final SoundEvent POTION_USE_EVENT = new SoundEvent(new Identifier(MOD_ID, "potion_use"));
-
-    public static final <T extends Block> T registerBlock  (String itemName, T item) {
+	public static final SoundEvent POTION_USE_EVENT = Registry.register(Registry.SOUND_EVENT, new Identifier(MOD_ID, "potion_use"), new SoundEvent(new Identifier(MOD_ID, "potion_use")));
+    public static <T extends Block> T registerBlock  (String itemName, T item) {
         return Registry.register(Registry.BLOCK, new Identifier(MOD_ID, itemName), item);
     }
-
     public static <FC extends FeatureConfig> ConfiguredFeature<FC, ?> registerConfiguredFeature(String id, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, id), configuredFeature);
 	}
-	
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
     }
@@ -68,8 +64,8 @@ public class ACResourcesMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// ACItems.registerItems();
-		ACBlocks.init();
-		ACItems.init();
+		ACBlocks.register();
+		ACItems.register();
 		BiomeModifications.addFeature(BiomeSelectors.all(), GenerationStep.Feature.UNDERGROUND_ORES, BuiltinRegistries.PLACED_FEATURE.getKey(ORE_TOPAZ_UPPER).orElseThrow());
 		BiomeModifications.addFeature(BiomeSelectors.all(), GenerationStep.Feature.UNDERGROUND_ORES, BuiltinRegistries.PLACED_FEATURE.getKey(ORE_TOPAZ_MIDDLE).orElseThrow());
 		BiomeModifications.addFeature(BiomeSelectors.all(), GenerationStep.Feature.UNDERGROUND_ORES, BuiltinRegistries.PLACED_FEATURE.getKey(ORE_TOPAZ_SMALL).orElseThrow());

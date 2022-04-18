@@ -2,8 +2,6 @@ package fr.astralcube.acresources.mixin;
 
 import java.util.UUID;
 
-import com.github.clevernucleus.dataattributes.api.DataAttributesAPI;
-import com.github.clevernucleus.playerex.api.ExAPI;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 
@@ -21,9 +19,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
 
 @Mixin (ArmorItem.class)
 public abstract class ArmorItemMixin {

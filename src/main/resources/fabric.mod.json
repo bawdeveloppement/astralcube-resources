@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "fr.astralcube.acresources.ACResourcesMod"
+    ],
+    "client": [
+      "fr.astralcube.acresources.client.ACResourcesClientMod"
     ]
   },
   "mixins": [

@@ -1,0 +1,37 @@
+{
+    "block.acresources.topaz_ore": "Topaz Ore",
+    "block.acresources.deepslate_topaz_ore": "Deepslate Topaz Ore",
+    "block.acresources.topaz_block": "Topaz Block",
+
+    "item.acresources.topaz_ingot": "Topaz Ingot",
+    "item.acresources.topaz_nugget": "Topaz Nugget",
+    "item.acresources.dexterity_necklace": "Dexterity Necklace",
+    "item.acresources.dexterity_gem": "Dexterity Gem",
+    "item.acresources.four_accessory_dexterity_necklace": "Four Accessory Dexterity Necklace",
+
+    "item.acresources.small_strength_potion": "Small Strength Potion",
+    "item.acresources.medium_strength_potion": "Medium Strength Potion",
+    "item.acresources.large_strength_potion": "Large Strength Potion",
+
+    "item.acresources.small_constitution_potion": "Small Constitution Potion",
+    "item.acresources.medium_constitution_potion": "Medium Constitution Potion",
+    "item.acresources.large_constitution_potion": "Large Constitution Potion",
+
+    "item.acresources.small_dexterity_potion": "Small Dexterity Potion",
+    "item.acresources.medium_dexterity_potion": "Medium Dexterity Potion",
+    "item.acresources.large_dexterity_potion": "Large Dexterity Potion",
+
+    "item.acresources.small_intelligence_potion": "Small Intelligence Potion",
+    "item.acresources.medium_intelligence_potion": "Medium Intelligence Potion",
+    "item.acresources.large_intelligence_potion": "Large Intelligence Potion",
+
+    "item.acresources.small_luckiness_potion": "Small Luckiness Potion",
+    "item.acresources.medium_luckiness_potion": "Medium Luckiness Potion",
+    "item.acresources.large_luckiness_potion": "Large Luckiness Potion",
+
+    "itemGroup.acresources.jewels": "AstralEarth Resources",
+
+    "item.acresources.when_its_dunk": "When it's drunk:",
+    "item.acresources.stat_x_of_x": "+%s %s",
+    "blank": ""
+}

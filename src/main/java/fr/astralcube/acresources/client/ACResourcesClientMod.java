@@ -2,7 +2,6 @@ package fr.astralcube.acresources.client;
 
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
-import fr.astralcube.acresources.ACResourcesMod;
 import fr.astralcube.acresources.common.item.ACItems;
 import net.fabricmc.api.ClientModInitializer;
 
